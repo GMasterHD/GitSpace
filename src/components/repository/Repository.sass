@@ -1,0 +1,70 @@
+@import '../Defines'
+
+.Repositories
+	margin: 0
+	padding: 0
+	list-style: none
+
+.Repository
+	border: none
+	border-radius: 10px
+	margin: auto
+	background: linear-gradient(0, $accent-color-2, $accent-color)
+	width: 60%
+
+	& > .Content
+		border-radius: 8px
+		border: none
+		background-color: $background-color-l
+		margin: 0px 5px 0px 5px
+
+		& > .Main
+			margin: 10px
+			
+			& > .Name
+				margin: 0
+				color: $foregrond-color
+				font-family: $font
+				font-size: 2.2em
+				font-weight: 600
+
+			& > .Description
+				margin: 0
+				color: #bbbbbb
+				font-size: 1.2em
+				font-family: $font
+
+		& > .Info
+			border-radius: 8px
+			margin-top: 25px
+			width: 100%
+			border-top: solid 2px white
+			& > .Lang
+				display: flex
+				flex-direction: row
+				padding: 5px 0px 5px 5px
+
+				& > .Text
+					margin: 0px 0px 0px 5px
+					color: $foregrond-color
+					font-family: $font
+					font-size: 1em
+					line-height: 1em
+
+				& > div
+					width: 1.2em
+					height: 1em
+					border-radius: 90px
+					border: 1px solid white
+					background-color: red
+
+				& > .Author
+					padding-right: 5px
+					width: 100%
+					text-align: right
+
+.RepositorySeperator
+	width: 80%
+	border: none
+	background-color: $background-color-l
+	height: 2px

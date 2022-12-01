@@ -1,0 +1,142 @@
+@import '../Defines'
+
+.AvatarContext
+	opacity: 0%
+	transition: opacity linear
+	transition-duration: 150ms
+	position: fixed
+	background-color: $background-color-l
+	border-radius: 10px
+
+	width: 15%
+	top: 100px
+	right: 5px
+	
+	filter: drop-shadow(15px 15px 16px black)
+	padding: 5px
+
+	background: linear-gradient(135deg, $accent-color, $accent-color-2)
+
+	& > ul
+		border-radius: 8px
+		background-color: $background-color-l
+		
+		list-style: none
+		margin: 0
+		padding: 8px
+
+		& > li
+			margin: 5px
+
+			& > a
+				border-radius: 90px
+				color: white
+				text-decoration: none
+				text-align: center
+				display: inline-block
+				width: 100%
+				font-family: $font
+				font-size: 1.2em
+
+				background-size: 210%
+				transition: .25s linear
+				border: solid 2px $background-color-l
+
+				&:hover
+					border: solid 2px $accent-color
+
+header
+	padding-bottom: 25px
+	height: 200px
+	width: 100vw
+	background-color: $background-color
+
+.Header
+	position: sticky
+	top: 0px
+	width: 100vw
+	padding-bottom: -3.2em
+
+	& > .StripeTop
+		height: 53px
+		background: linear-gradient(45deg, $accent-color-2, $accent-color)
+
+		& > h1
+			color: $foregrond-color
+			font-family: $font
+			font-size: 2.5em
+			margin: 0
+			line-height: 53px
+			padding-left: 5px
+
+	& > .Stripe
+		font-family: $font
+		color: $foregrond-color
+		background-color: $background-color
+		height: 4em
+		border-bottom: solid 1px white
+
+		& > .TabBar
+			position: sticky
+			display: flex
+			margin: 0
+			padding: 0
+			list-style: none
+
+			& > li
+				text-align: center
+				width: 15vw
+				padding: 5px
+				margin: 5px
+
+				& > hr
+					visibility: hidden
+					background-color: $accent-color
+					border: none
+					height: 4px
+					border-radius: 90px
+					transform: translateX(10px) translateY(-6px)
+
+					&.Selected
+						visibility: visible
+
+				& > .Tab
+					transition: color, 150ms
+					font-size: 1.2em
+					border-radius: 5px
+					width: 15vw
+					padding: 5px
+					margin: 5px
+					
+					&:hover
+						background-color: $accent-color
+						border-radius: 5px
+
+					& > a
+						color: $foregrond-color
+						text-decoration: none
+						display: inline-block
+						width: 100%
+
+.Avatar
+	border-radius: 90px
+	width: 96px
+	height: 96px
+
+	position: absolute
+	top: 10px
+	right: 22px
+	border-radius: 90px
+	background-color: $background-color
+
+	& > img
+		width: 88px
+		height: 88px
+		border-radius: 90px
+		padding: 4px
+		
+		&:hover
+			cursor: pointer
+
+	&:hover .AvatarContext
+		opacity: 100%
